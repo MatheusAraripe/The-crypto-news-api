@@ -1,4 +1,4 @@
-const PORT = process.env.PORT || 3000
+const port = process.env.PORT || 3000
 
 const express = require('express')
 const axios = require('axios')
@@ -108,4 +108,5 @@ app.get('/news/:newspaperId', (req, res) => {
         res.json(specificArticles)
     }).catch(err => console.log(err))
 })
-app.listen(PORT, () => console.log(`app runing on PORT ${PORT}`))
+
+app.listen(port, () => console.log(`app runing on PORT ${port}`))

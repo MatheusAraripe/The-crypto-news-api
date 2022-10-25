@@ -84,7 +84,7 @@ app.get('/news', (req, res) => {
     res.json(articles)
 })
 
-app.get('/news/:newspaperId', async (req, res) => {
+app.get('/news/:newspaperId', (req, res) => {
     const newspaperId = req.params.newspaperId
 
     const newspaperAddress = newspapers.filter(newspaper => newspaper.name == newspaperId)[0].address
